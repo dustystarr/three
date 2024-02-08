@@ -68,4 +68,25 @@ class MyApp extends StatelessWidget {
       ),
     );
   }
+  @override
+  ShowMyAlerDialog(BuildContext context) {
+    AlertDialog dialog = AlertDialog(
+      title: Text("Election 2020"),
+      content: Text("Will you vote for Trump?"),
+      actions: [
+        ElevatedButton(
+          child: Text("Yes"),
+          onPressed: (){
+            Navigator.of(context).pop("Yes, Of course!");
+          }
+        ),
+        ElevatedButton(
+          child: Text("No"),
+          onPressed: (){
+            Navigator.of(context).pop("No, i will vote for Biden");
+          }
+        ),
+      ],
+    );
+  } 
 }
